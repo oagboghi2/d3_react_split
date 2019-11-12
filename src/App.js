@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import * as d3 from 'd3'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const temperatureData = [ 8, 5, 13, 9, 12 ];
+
+// d3.select(this.refs.temperatures)
+//         .selectAll("h2")
+//         .data(temperatureData)
+//         .enter()
+//             .append("h2")
+//             .text("New Temperature")
+
+d3.select(this.refs.myDiv).style('background-color', 'blue')
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.myRef = React.createRef();
+  }
+    
+ 
+    render(){
+      return (<div refs={this.myRef}></div>)
+    }
 }
-
-export default App;
+export default App
